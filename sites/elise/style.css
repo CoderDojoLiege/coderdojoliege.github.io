@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  background-color: lightblue;
+}
+
+h1 {
+    color: red;
+    font-size: 50px;
+}
+
+h2 {
+  color: purple;
+}

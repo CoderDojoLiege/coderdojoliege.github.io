@@ -1,0 +1,17 @@
+ body {
+   font-family: sans-serif;
+   background-color:lightblue;
+ }
+ 
+ h1 {
+   color: blue;
+   font-size: 45px;
+ }
+ h2 {
+   color: rgb(255,23,12);
+   font-size: 30px;
+ }
+ p {
+   color: green;
+ }
+ 

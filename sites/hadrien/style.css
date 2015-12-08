@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color:blue ;
+font-size:100px;
+ text-align:center;
+}
+
+h2 {
+  color:purple ;
+   text-align:center;
+}
+
+p {
+  color:red ;
+   text-align:center;
+}

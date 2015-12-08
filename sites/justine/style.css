@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: rgb(23, 154, 122);
+  font-size: 36px;
+}
+
+h2 {
+  color: purple;
+}
+
+p {
+  font-weight: bold;
+}
