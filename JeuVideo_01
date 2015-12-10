@@ -1,0 +1,111 @@
+<html>
+<head>
+<style>
+body{
+	background-color: #333;
+}
+
+#main-content
+{
+	display: block;
+	overflow: hidden;
+    color: white;
+}
+
+#comments
+{
+	color: #E74C3C;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var monsterLife = 10;
+var monsterExist = true;
+var comments = "";
+var healPower = 1;
+var attackPower = 3;
+
+$(document).ready(function()
+{
+	refreshDisplay();
+});
+
+function refreshDisplay()
+{
+	$("#monsterLife").text(monsterLife);
+}
+
+function attackMonster()
+{
+	if(monsterExist)
+    {
+		monsterLife = monsterLife - attackPower;
+        
+        if(monsterLife <= 0)
+        {
+	        monsterLife = 0;
+            monsterExist = false;
+           
+			comments = "Le monstre est mort X_X argh.";
+        }
+        else
+        {    
+			comments = "Le monstre a pris" + attackPower + " points de dégats.";
+        }
+
+        refreshDisplay();
+		
+    }
+	$("#comments").text(comments);
+    
+}
+
+function healMonster()
+{
+    //le monstre est ressuscité
+	if(monsterLife <= 0)
+	{
+		monsterLife = 1;
+		monsterExist = true;
+
+		comments = "Le monstre est revenu, il est blessé !";
+	}
+    //le monstre ne doit pas avoir plus de 10 points de vie
+	else if(monsterLife >= 10)
+	{    
+		monsterLife = 10;
+		comments = "Le monstre est en pleine santé.";
+	}
+    //le monstre est soigné
+	else
+	{
+		monsterLife = monsterLife + healPower;
+		comments = "Le monstre a reçu " + healPower + " points de vie.";
+	}
+
+    refreshDisplay();
+		
+	$("#comments").text(comments);
+    
+}
+</script>
+
+</head>
+<body>
+	<div><img src="http://coderdojo-liege.be/wp-content/uploads/2015/06/logo2.png" /></div>
+    <br />
+	<div id="main-content">
+    	<p>
+        	Vie du monstre / Monster life: <span id="monsterLife"></span>
+        </p>
+        <p>
+			<button onclick="attackMonster();">Attack</button>
+			<button onclick="healMonster();">Heal</button>
+        </p>
+    	<p>
+        	Commentaire: <span id="comments"></span>
+        </p>
+	</div>
+</body>
+</html>
