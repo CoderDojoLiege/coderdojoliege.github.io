@@ -5,6 +5,9 @@ body {
 h1 {
   color: rgb(23, 154, 122);
   font-size: 36px;
+  border: 40px solid blue;
+  padding: 20px 40px 0 5px;
+  margin: 100px 20px 1px 150px;
 }
 
 h2 {
@@ -14,3 +17,49 @@ h2 {
 p {
   font-weight: bold;
 }
+
+ul#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#menu li {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  background-color: silver;
+}
+
+ul#menu li:hover {
+  background-color: #666666;
+}
+
+ul#menu li a {
+ text-decoration: none; 
+}
+
+li.bleu {
+  background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
